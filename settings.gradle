@@ -1,0 +1,3 @@
+include ':apklischeckpayment'
+include ':app'
+rootProject.name = "apklischeckpaid"
