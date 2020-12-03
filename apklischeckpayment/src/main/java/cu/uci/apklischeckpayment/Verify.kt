@@ -7,7 +7,7 @@ import android.os.RemoteException
 class Verify {
     companion object {
 
-        private const val APKLIS_PROVIDER = "content://cu.uci.android.apklis.provider/app/"
+        private const val APKLIS_PROVIDER = "content://cu.uci.android.apklis.payment.provider/app/"
         private const val APKLIS_PAID = "paid"
         private const val APKLIS_USER_NAME = "user_name"
 
