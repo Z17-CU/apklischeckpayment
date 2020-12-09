@@ -16,15 +16,28 @@ allprojects {
 
    implementation 'com.github.Z17-CU:apklischeckpayment:$VERSION'
 ```
+* Step 2.1 For Java App Add this dependency
+```groovy
+
+   implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:$LAST_VERSION'
+```
+
 ### Usage
 
 * It is necessary to have the Apklis application installed and a section started to check, otherwise the user would be null and the payment would be false.
 
-* Check paid
+* Check paid Kotlin
 ```kotlin
     val response = Verify.isPurchased(this, PACKAGE_ID)
     val userName = response.second
     val isPaid = response.first
+```
+
+* Check paid Java
+```java
+   Pair<Boolean, String> response = Verify.Companion.isPurchased(this, PACKAGE_ID);
+   String userName = response.getSecond();
+   Boolean isPaid = response.getFirst();
 ```
 ### Contributing
 All contributions are welcome!!!
