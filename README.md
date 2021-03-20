@@ -31,13 +31,32 @@ allprojects {
     val response = Verify.isPurchased(this, PACKAGE_ID)
     val userName = response.second
     val isPaid = response.first
+    val isInsallApklis = response.third
 ```
+
 
 * Check paid Java
 ```java
-   Pair<Boolean, String> response = Verify.Companion.isPurchased(this, PACKAGE_ID);
+   Triple<Boolean, Boolean, String> response = Verify.Companion.isPurchased(this, PACKAGE_ID);
    String userName = response.getSecond();
    Boolean isPaid = response.getFirst();
+   Boolean isInsallApklis = response.getThird();
+```
+
+* Show alert Kotlin
+```kotlin
+    // ACTION: 1 Apklis is not install, 2 User not logged in, 3 App not purchased
+    Verify.showAlert(this, ACTION, PACKAGE_ID, title, message)
+
+    Verify.showAlert(this, 1, PACKAGE_ID, "Usuario no logueado", "Para poder usar APP_NAME debe iniciar sección en Apklis, luego de iniciar sección puede continuar con el uso de APP_NAME")
+```
+
+* Show alert Java
+```java
+    // ACTION: 1 Apklis is not install, 2 User not logged in, 3 App not purchased
+    Verify.showAlert(this, ACTION, PACKAGE_ID, title, message);
+
+    Verify.showAlert(this, 1, PACKAGE_ID, "Usuario no logueado", "Para poder usar APP_NAME debe iniciar sección en Apklis, luego de iniciar sección puede continuar con el uso de APP_NAME");
 ```
 ### Contributing
 All contributions are welcome!!!
