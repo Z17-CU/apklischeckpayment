@@ -11,12 +11,12 @@ allprojects {
 	}
 }
 ```
-* Step 2. Add the dependency
+* Step 2. Add the dependencys
 ```groovy
 
    implementation 'com.github.Z17-CU:apklischeckpayment:$VERSION'
 ```
-* Step 2.1 For Java App Add this dependency
+* Only for Java App add this dependency
 ```groovy
 
    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:$LAST_VERSION'
